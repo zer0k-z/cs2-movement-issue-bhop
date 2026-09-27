@@ -158,7 +158,7 @@ perfect + restored chance = (total - excess) / T
 
 The first term is Case A with `a + w > T`. The second is Case B, where the window is `d + w` long for every `a` between `d` and 1. Without the excess term the chance is overstated for slow falls, by about 2.5 points at 128 u/s with a 16ms scroll.
 
-**Against scroll speed** (`scroll_rate_comparison.png`), the same formulas are used with `d` fixed at 256 u/s and `T` varying:
+**Against scroll speed** (`scroll_rate_comparison.png`), the same formulas are used with `v` fixed at 256 u/s (so `d = 0.506` tick) and `T` varying:
 ```
 chance = 0                          if the gap is 15.625ms or less (cooldown)
 chance = lottery, see below         between 15.625ms and 15.87ms
