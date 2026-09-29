@@ -348,7 +348,8 @@ All of the above was checked on a real CS2 server with a server-side test plugin
 
 1. Bots start by standing on flat ground.
 2. For each landing, a bot is teleported into the air and dropped so it hits the floor at a chosen fall speed, with 275 u/s horizontal speed (above the speed cap). 
-3. The plugin writes the bot's input for every tick itself, including the subtick timestamps, so jump presses happen at exact, known times. 4. Each scroll step is a press and release in the same input packet, like a real mouse wheel, and no other inputs are made around the landing. The landing position within the tick and the scroll phase are randomized for every landing.
+3. The plugin writes the bot's input for every tick itself, including the subtick timestamps, so jump presses happen at exact, known times.
+4. Each scroll step is a press and release in the same input packet, like a real mouse wheel, and no other inputs are made around the landing. The landing position within the tick and the scroll phase are randomized for every landing.
 
 The outcome (perfect, buffered, restored, jump a tick later, or no jump) is read from the server's own movement state, which includes when the player was grounded, the recorded landing time, whether `WalkMove` ran before the jump, and the speed before and after the jump.
 
