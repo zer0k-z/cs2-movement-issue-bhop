@@ -4,7 +4,7 @@ This is a writeup of how bunnyhopping works in CS2 compared to CS:GO, and why pe
 
 It is based on reverse engineering CS2's movement code. 
 
-The numbers were derived from the code and then checked in game with about 130,000 automated bot landings (see [Measured in game](#measured-in-game)).
+The numbers were derived from the code and then checked in game with about 130,000 automated bot landings (see [In-game verification](#in-game-verification)).
 
 A PDF version of this document, including the appendix, is available as [bunnyhopping-in-cs2.pdf](bunnyhopping-in-cs2.pdf).
 
@@ -44,7 +44,7 @@ Table of Contents:
 	- [The jump cooldown is... different](#the-jump-cooldown-is-different)
 	- [Ideal scroll speed and perf rate in CS2](#ideal-scroll-speed-and-perf-rate-in-cs2)
 	- [fps\_max and consistent bhop timing](#fps_max-and-consistent-bhop-timing)
-	- [Measured in game](#measured-in-game)
+	- [In-game verification](#in-game-verification)
 
 # The basics
 
@@ -343,7 +343,7 @@ The game doesn't allow `fps_max` below 64, so a cap where a single frame is 16ms
 
 The cap doesn't scroll for you, and you still need to hit roughly the right pace, about 16–20ms per notch. What a good cap does is make the outcome of a given scroll pace consistent. On a good cap, a scroll that lands on the 16ms frame count always gets through. On a bad cap, the same scroll sometimes or always gets rounded into the lockout.
 
-## Measured in game
+## In-game verification
 All of the above was checked on a real CS2 server with a server-side test plugin.
 
 1. Bots start by standing on flat ground.
