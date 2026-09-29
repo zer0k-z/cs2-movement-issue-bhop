@@ -162,7 +162,7 @@ This gives a weird result. Since a jump press is itself a split, pressing jump w
 
 In other words, **every press inside the last 2 units of the fall counts**, no matter how long that takes. At 260 u/s that is 7.8ms, which is almost twice the 3.9ms the window is supposed to give before landing.
 
-If the player falls slower than about 128 u/s, the last 2 units take longer than a whole tick. A tick always ends while they're inside that range, so the recorded landing time is never the moment of contact. It's always the first tick end (or input) after the player gets within 2 units, up to a full tick or more before they would have touched the floor. This mostly happens when landing on a higher block.
+If the player falls slower than 134 u/s, the last 2 units take longer than a whole tick. See the [appendix](appendix.md#time-spent-in-the-last-2-units) for why it's 134 and not 128. A tick always ends while they're inside that range, so the recorded landing time is never the moment of contact. It's always the first tick end (or input) after the player gets within 2 units, up to a full tick or more before they would have touched the floor. This mostly happens when landing on a higher block.
 
 However, there's a flip side. If a tick ends, or the player presses any other key, while they're inside those last 2 units, the player gets grounded at that moment instead. `WalkMove` then runs in the next move, and any jump after that is at best a restored bhop (no bonus height).
 

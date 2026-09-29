@@ -69,7 +69,7 @@ The player reaches 2 units above the floor with speed `sqrt(v² - 2·g·2)`. Und
 d = 64 · (v - sqrt(v² - 4g)) / g       (in ticks)
 ```
 
-This is slightly longer than `2 / v` because the player is slower at the start of those 2 units. For example, `d = 0.506` tick (7.9ms) at 256 u/s and `d = 1.054` ticks at 128 u/s.
+This is slightly longer than `2 / v` because the player is slower at the start of those 2 units. For example, `d = 0.506` tick (7.9ms) at 256 u/s and `d = 1.054` ticks at 128 u/s. Setting `d = 1` and solving for `v` gives 134.25 u/s, the landing speed at which the last 2 units take exactly one tick. The `2 / v` shortcut would give 128 u/s.
 
 Plugging in 256 u/s: sqrt(256² − 3200) = sqrt(62336) = 249.67, so d = 64 × (256 − 249.67) / 800 = 0.506 tick, or 7.9ms. With the 2/v shortcut it would be 2/256 s = 0.5 tick (7.8ms).
 
