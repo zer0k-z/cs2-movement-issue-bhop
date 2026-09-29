@@ -6,6 +6,8 @@ It is based on reverse engineering CS2's movement code.
 
 The numbers were derived from the code and then checked in game with about 130,000 automated bot landings (see [Measured in game](#measured-in-game)).
 
+A PDF version of this document, including the appendix, is available as [bunnyhopping-in-cs2.pdf](bunnyhopping-in-cs2.pdf).
+
 # TL;DR
 
 CS:GO was simple. It was tick perfect, meaning the jump had to be in the first tick on the ground, which gave a one tick window and at best a 50% perf rate at the ideal scroll speed. CS2 works differently in several ways, and each one changes what a player should do.
@@ -273,8 +275,8 @@ At a 16ms gap, the average odds (assuming no other inputs and a random landing p
 |---|---|---|---|---|---|
 | 160 u/s or slower | ~8.3ms | ~12.0ms | ~52% | ~74% | 52–54% / 73–74% |
 | 200 u/s | ~8.2ms | ~11.3ms | ~51% | ~70% | 52% / 70% |
-| 256 u/s | ~7.8ms | ~10.3ms | ~49% | ~64% | 49% / 63% |
-| 300 u/s | ~7.5ms | ~9.7ms | ~47% | ~60% | 48% / 60% |
+| 256 u/s (≈ sustained bhop) | ~7.8ms | ~10.3ms | ~49% | ~64% | 49% / 63% |
+| 300 u/s (≈ first bhop) | ~7.5ms | ~9.7ms | ~47% | ~60% | 48% / 60% |
 | 400 u/s | ~6.9ms | ~8.6ms | ~43% | ~54% | 42% / 53% |
 | 512 u/s | ~6.4ms | ~7.8ms | ~40% | ~49% | 41% / 49% |
 | 1000 u/s | ~6.7ms | ~7.7ms | ~42% | ~48% | 43% / 48% |
@@ -374,8 +376,8 @@ The second test varied the fall speed at a 16ms gap between presses, with 88,000
 | 128 u/s | 53.5% / 51.9% | 3.2% / 3.1% | 74.1% / 73.8% |
 | 160 u/s | 53.2% / 51.9% | 3.0% / 3.1% | 73.9% / 73.8% |
 | 200 u/s | 52.2% / 51.4% | 3.2% / 3.1% | 69.5% / 70.4% |
-| 256 u/s | 49.2% / 49.0% | 3.0% / 3.1% | 62.9% / 64.4% |
-| 300 u/s | 48.3% / 46.9% | 3.5% / 3.1% | 60.4% / 60.5% |
+| 256 u/s (≈ sustained bhop) | 49.2% / 49.0% | 3.0% / 3.1% | 62.9% / 64.4% |
+| 300 u/s (≈ first bhop) | 48.3% / 46.9% | 3.5% / 3.1% | 60.4% / 60.5% |
 | 400 u/s | 42.3% / 42.9% | 3.3% / 3.1% | 52.5% / 53.8% |
 | 512 u/s | 40.5% / 39.7% | 4.2% / 3.1% | 48.7% / 48.9% |
 | 600 u/s | 40.6% / 40.5% | 6.6% / 5.7% | 48.6% / 48.8% |
